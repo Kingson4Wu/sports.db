@@ -28,6 +28,16 @@ sports.db/
   └── LICENSE
 ```
 
+## Cloning the Repository
+
+To avoid downloading large files when cloning the repository, use the following command which utilizes the `clone_repo.sh` script:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Kingson4Wu/sports.db/main/clone_repo.sh | bash
+```
+
+This script clones the repository with Git LFS smudging disabled, which prevents large files from being downloaded during the initial clone. You can then selectively download only the LFS files you need.
+
 ## Setting Up the Development Environment
 
 This project provides a conda environment file for setting up the development environment.
@@ -60,18 +70,14 @@ pip install -e .
   - Latest data: `https://cdn.jsdelivr.net/gh/yourname/sports.db@main/data/football/worldcup_2022.json`
   - Specific version: `https://cdn.jsdelivr.net/gh/yourname/sports.db@v1.0.0/data/football/worldcup_2022.json`
 
-## Data Distribution
-
-### GitHub Release
-- Used to publish snapshots of a specific version (e.g., v1.0.0)
-- Files under each Release have stable download URLs that don't change with branch updates
-- Example: `https://github.com/yourname/sports.db/releases/download/v1.0.0/worldcup_2022.json`
-
-### jsDelivr CDN
-- Used to accelerate access to GitHub files
-- Directly pull from main branch or specified tag:
-  - Latest data: `https://cdn.jsdelivr.net/gh/yourname/sports.db@main/data/football/worldcup_2022.json`
-  - Specific version: `https://cdn.jsdelivr.net/gh/yourname/sports.db@v1.0.0/data/football/worldcup_2022.json`
+### Direct Access (Not Currently Implemented)
+- Direct access to files in the repository is technically possible via GitHub's raw URL format
+- However, this approach is not implemented or recommended for the following reasons:
+  - It would create unnecessary complexity in the repository architecture
+  - Current traffic expectations are low, so performance optimization through direct access is not needed
+  - Direct file access from the repository could lead to bandwidth limitations or throttling
+  - Using GitHub Releases and CDN provides better control, versioning, and performance
+- Files should be accessed through the established distribution channels (GitHub Releases or CDN) rather than direct repository access
 
 ## Data Processing Scripts
 

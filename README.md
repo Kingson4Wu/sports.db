@@ -9,8 +9,10 @@ For detailed information about the project structure, data processing scripts, a
 This repository contains sports data that can be accessed directly from GitHub.
 
 ### Direct Access
-- Latest data: `https://cdn.jsdelivr.net/gh/yourname/sports.db@main/data/football/worldcup_2022.json`
-- Specific version: `https://cdn.jsdelivr.net/gh/yourname/sports.db@v1.0.0/data/football/worldcup_2022.json`
+
+Data can be accessed directly from the repository using raw GitHub URLs. However, this approach is not recommended for production use as it may lead to bandwidth limitations. 
+
+For better performance and reliability, we plan to implement CDN distribution in the future. Currently, the project does not anticipate high traffic volumes, so we have not implemented additional access mechanisms to avoid unnecessary repository complexity.
 
 ### Client Library
 
