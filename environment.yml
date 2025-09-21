@@ -1,0 +1,5 @@
+name: sports.db
+channels:
+  - defaults
+dependencies:
+  - python=3.13

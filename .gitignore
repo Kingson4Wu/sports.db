@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.log
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+.idea/
+*.egg-info/
+.ruff_cache/
+.bandit_cache/
+.radon_cache/
+.py-spy_cache/
+forgeflow.prof
+.coverage
+.idea
