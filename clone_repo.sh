@@ -1,11 +1,10 @@
 rm -rf sports.db
-git clone --no-checkout --filter=blob:none git@github.com:Kingson4Wu/sports.db.git
-cd sports.db
-git sparse-checkout init --no-cone
-git checkout main -- exclude_data.sh dir.txt exclude.txt
-chmod +x exclude_data.sh
-./exclude_data.sh
+GIT_LFS_SKIP_SMUDGE=1 git clone git@github.com:Kingson4Wu/sports.db.git
 
+# Download a single file or path's LFS content
+# git lfs pull -I "path/to/largefile.bin"
 
+# Download the LFS content for the entire repository
+# git lfs pull
 
 # curl -fsSL https://raw.githubusercontent.com/Kingson4Wu/sports.db/main/clone_repo.sh | bash
